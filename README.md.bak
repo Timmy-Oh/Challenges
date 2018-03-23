@@ -24,10 +24,8 @@ Unzip all data and put them into './input/' folder
 
 
 | Model	| Embeddings | Public | Private	|
-|:------------- |:---------- | ------- | ------ |
+|:------ |:---------- | ------- | ------ |
 | |
-| RNN		| fasttext		| 0.9850	| 0.9843	|
-| RNN-CNN	| fasttext		| 0.9846	| 0.9842	|
-| RNN-RNN	| fasttext		| 0.9857	| 0.9847	|
-| RNN-RNN-CNN	| fasttext		| 0.9855	| 0.9845	|
+| RNN	| fasttext	| 0.9850	| 0.9843	|
+| RNN-CNN | fasttext	| 0.9846	| 0.9842	|
 
