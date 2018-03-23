@@ -19,7 +19,7 @@ keras == 2.1.5
 ### Models (best private score shown): 
 
 
-| Model	| Embeddings | Public | Private | Public | Local |
+| Model	| Embeddings | Public | Private	| Local |
 |:------ |:---------- | ------- | ------ | ----- |
 |  |
 | RNN	| fasttext	| 0.9843	| 0.9850	| 0.9896|
