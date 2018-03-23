@@ -3,11 +3,11 @@ the Code for Kaggle Competition: [Toxic Comment Classification Challenge](https:
 
 **475th place in Competition**
 
-## Dataset
+## Dataset:
 [The dataset](https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge/data) is available via Kaggle competition
 Unzip all data and put them into './input/' folder
 
-## Requirements
+## Requirements:
  * Anaconda == 5.1.0
  * python == 3.6
  * tensorflow == 1.6.0
@@ -18,7 +18,7 @@ Unzip all data and put them into './input/' folder
   * [fastText: crawl-300d-2M](https://github.com/facebookresearch/fastText/blob/master/docs/english-vectors.md) \[ [download](https://s3-us-west-1.amazonaws.com/fasttext-vectors/crawl-300d-2M.vec.zip) \]
   * [GloVe: glove.840B.300d](https://nlp.stanford.edu/projects/glove/) 
 
-## Models (best private score shown): 
+## Models: 
 
 
 | Model	| Embeddings | Public | Private	|
