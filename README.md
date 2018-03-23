@@ -6,10 +6,10 @@ This repositroy is the Code for Kaggle Competition: [Toxic Comment Classificatio
 Unzip all data and put them into './input/' folder
 
 ### Requirements
-Anaconda == 5.1.0
-python == 3.6
-tensorflow == 1.6.0
-keras == 2.1.5
+ * Anaconda == 5.1.0
+ * python == 3.6
+ * tensorflow == 1.6.0
+ * keras == 2.1.5
 
 
 ### Pretrained Word Embeddings: 
