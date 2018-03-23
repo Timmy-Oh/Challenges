@@ -22,6 +22,7 @@ keras == 2.1.5
 | Model	| Embeddings | Public | Private	| Local |
 |:------ |:---------- | ------- | ------ | ----- |
 | RNN	| fasttext	| 0.9843	| 0.9850	| 0.9896|
+| RNN	| fasttext	| 0.9843	| 0.9850	| 0.9896|
 
    - |rnn    |(*0.9845 private*,	|0.9859 public)|
    - rnn-cnn (*0.9858 private*,	0.9863 public)
