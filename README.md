@@ -13,10 +13,12 @@ Unzip all data and put them into './input/' folder
  * tensorflow == 1.6.0
  * keras == 2.1.5
 
+##
 
 ## Pretrained Word Embeddings: 
   * [FastText: crawl-300d-2M](https://github.com/facebookresearch/fastText/blob/master/docs/english-vectors.md) \[[download](https://s3-us-west-1.amazonaws.com/fasttext-vectors/crawl-300d-2M.vec.zip)\]
   * [GloVe: glove.840B.300d](https://nlp.stanford.edu/projects/glove/) \[[download](http://nlp.stanford.edu/data/glove.840B.300d.zip)\]
+#### Download the pretrained Vector and put it into 'emb_model' folder
 
 ## Models: 
 
