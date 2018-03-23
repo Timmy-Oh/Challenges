@@ -17,6 +17,12 @@ keras == 2.1.5
   * [GloVe: glove.840B.300d](https://nlp.stanford.edu/projects/glove/) 
 
 ### Models (best private score shown): 
+
+
+| Model	| Embeddings | Public | Private | Public | Local |
+|:------ |:---------- | ------- | ------ | ----- |
+| RNN	| fasttext	| 0.9843	| 0.9850	| 0.9896|
+
    - |rnn    |(*0.9845 private*,	|0.9859 public)|
    - rnn-cnn (*0.9858 private*,	0.9863 public)
    - rnn-rnn (*0.9856 private*,	0.9861 public)
