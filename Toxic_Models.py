@@ -99,6 +99,54 @@ def get_model_rnn_cnn(
 
     return model
 
+def get_model_2rnn(
+                  embedding_matrix, cell_size = 80, cell_type_GRU = True,
+                  maxlen = 180, max_features = 100000, embed_size = 300,
+                  prob_dropout = 0.2, emb_train = False
+                 ):
+    
+    inp_pre = Input(shape=(maxlen, ), name='input_pre')
+    inp_post = Input(shape=(maxlen, ), name='input_post')
+
+    ##pre
+    x1 = Embedding(max_features, embed_size, weights=[embedding_matrix], trainable = emb_train)(inp_pre)
+    x1 = SpatialDropout1D(prob_dropout)(x1)
+    
+    if cell_type_GRU:
+        x1 = Bidirectional(CuDNNLSTM(cell_size, return_sequences=True))(x1)
+        x1 = Bidirectional(CuDNNGRU(cell_size, return_sequences=True))(x1)
+    else :
+        x1 = Bidirectional(CuDNNLSTM(cell_size, return_sequences=True))(x1)
+        x1 = Bidirectional(CuDNNLSTM(cell_size, return_sequences=True))(x1)
+    
+    avg_pool1 = GlobalAveragePooling1D()(x1)
+    max_pool1 = GlobalMaxPooling1D()(x1)
+    
+    ##post
+    x2 = Embedding(max_features, embed_size, weights=[embedding_matrix], trainable = emb_train)(inp_post)
+    x2 = SpatialDropout1D(prob_dropout)(x2)
+    
+    if cell_type_GRU:
+        x2 = Bidirectional(CuDNNLSTM(cell_size, return_sequences=True))(x2)
+        x2 = Bidirectional(CuDNNGRU(cell_size, return_sequences=True))(x2)
+    else :
+        x2 = Bidirectional(CuDNNLSTM(cell_size, return_sequences=True))(x2)
+        x2 = Bidirectional(CuDNNLSTM(cell_size, return_sequences=True))(x2)
+    
+    avg_pool2 = GlobalAveragePooling1D()(x2)
+    max_pool2 = GlobalMaxPooling1D()(x2)
+    
+    ##merge
+    conc = concatenate([avg_pool1, max_pool1, avg_pool2, max_pool2])
+    outp = Dense(6, activation="sigmoid")(conc)
+    
+    model = Model(inputs=[inp_pre, inp_post], outputs=outp)
+    model.compile(loss='binary_crossentropy',
+                  optimizer='adam',
+                  metrics=['binary_crossentropy', 'accuracy'])
+
+    return model
+
 def get_model_2rnn_cnn(
                        embedding_matrix, cell_size = 80, cell_type_GRU = True,
                        maxlen = 180, max_features = 100000, embed_size = 300,
@@ -114,7 +162,7 @@ def get_model_2rnn_cnn(
     x1 = SpatialDropout1D(prob_dropout)(x1)
     
     if cell_type_GRU:
-        x1 = Bidirectional(CuDNNGRU(cell_size, return_sequences=True))(x1)
+        x1 = Bidirectional(CuDNNLSTM(cell_size, return_sequences=True))(x1)
         x1 = Bidirectional(CuDNNGRU(cell_size, return_sequences=True))(x1)
     else :
         x1 = Bidirectional(CuDNNLSTM(cell_size, return_sequences=True))(x1)
@@ -129,7 +177,7 @@ def get_model_2rnn_cnn(
     x2 = SpatialDropout1D(prob_dropout)(x2)
     
     if cell_type_GRU:
-        x2 = Bidirectional(CuDNNGRU(cell_size, return_sequences=True))(x2)
+        x2 = Bidirectional(CuDNNLSTM(cell_size, return_sequences=True))(x2)
         x2 = Bidirectional(CuDNNGRU(cell_size, return_sequences=True))(x2)
     else :
         x2 = Bidirectional(CuDNNLSTM(cell_size, return_sequences=True))(x2)
@@ -151,7 +199,7 @@ def get_model_2rnn_cnn(
 
     return model
 
-def get_model_rnn2_cnn_sp(
+def get_model_2rnn_cnn_sp(
                           embedding_matrix, cell_size = 80, cell_type_GRU = True,
                           maxlen = 180, max_features = 100000, embed_size = 300,
                           prob_dropout = 0.2, emb_train = False,
@@ -166,7 +214,7 @@ def get_model_rnn2_cnn_sp(
     x1 = SpatialDropout1D(prob_dropout)(x1)
     
     if cell_type_GRU:
-        x1_ = Bidirectional(CuDNNGRU(cell_size, return_sequences=True))(x1)
+        x1_ = Bidirectional(CuDNNLSTM(cell_size, return_sequences=True))(x1)
         x1 = Bidirectional(CuDNNGRU(cell_size, return_sequences=True))(x1_)
     else :
         x1_ = Bidirectional(CuDNNLSTM(cell_size, return_sequences=True))(x1)
@@ -185,7 +233,7 @@ def get_model_rnn2_cnn_sp(
     x2 = SpatialDropout1D(prob_dropout)(x2)
     
     if cell_type_GRU:
-        x2_ = Bidirectional(CuDNNGRU(cell_size, return_sequences=True))(x2)
+        x2_ = Bidirectional(CuDNNLSTM(cell_size, return_sequences=True))(x2)
         x2 = Bidirectional(CuDNNGRU(cell_size, return_sequences=True))(x2_)
     else :
         x2_ = Bidirectional(CuDNNLSTM(cell_size, return_sequences=True))(x2)
@@ -211,7 +259,7 @@ def get_model_rnn2_cnn_sp(
 
     return model
 
-def get_model_dual_rnn2_cnn_sp(
+def get_model_dual_2rnn_cnn_sp(
                                embedding_matrix, cell_size = 80, cell_type_GRU = True,
                                maxlen = 180, max_features = 100000, embed_size = 300,
                                prob_dropout = 0.2, emb_train = False,
