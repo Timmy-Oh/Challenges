@@ -13,7 +13,7 @@ Unzip all data and put them into './input/' folder
 
 
 ### Pretrained Word Embeddings: 
-  * [fastText: wiki.en.bin](https://fasttext.cc/docs/en/english-vectors.html)
+  * [fastText: common-crawl-2M](https://github.com/facebookresearch/fastText/blob/master/docs/english-vectors.md) - [download](https://s3-us-west-1.amazonaws.com/fasttext-vectors/crawl-300d-2M.vec.zip)
   * [GloVe: glove.840B.300d](https://nlp.stanford.edu/projects/glove/) 
 
 ### Models (best private score shown): 
