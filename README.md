@@ -33,8 +33,8 @@ Unzip all data and put them into './input/' folder
 | RNN-RNN	| fasttext		| 0.9857	| 0.9847	|
 | RNN-RNN-CNN	| fasttext		| 0.9855	| 0.9845	|
 | |
-| RNN		| glove		| 0.9853	| 0.9842	|
-| RNN-CNN	| glove		| 0.9854	| 0.9843	|
-| RNN-RNN	| glove		| 0.	| 0.	|
-| RNN-RNN-CNN	| glove		| 0.	| 0.	|
+| RNN		| glove			| 0.9853	| 0.9842	|
+| RNN-CNN	| glove			| 0.9854	| 0.9843	|
+| RNN-RNN	| glove			| 0.9859	| 0.9851	|
+| RNN-RNN-CNN	| glove			| 0.9857	| 0.9849	|
 
