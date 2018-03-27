@@ -41,4 +41,4 @@ Unzip all data and put them into './input/' folder
 ## Model Architecture:
 
 ### RNN
-![RNN](/imgs/rnn.png)
+![RNN](/imgs/model_rnn.png)
