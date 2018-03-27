@@ -38,3 +38,7 @@ Unzip all data and put them into './input/' folder
 | RNN-RNN	| glove			| 0.9859	| 0.9851	|
 | RNN-RNN-CNN	| glove			| 0.9857	| 0.9849	|
 
+## Model Architecture:
+
+### RNN
+![RNN](/imgs/rnn.png)
