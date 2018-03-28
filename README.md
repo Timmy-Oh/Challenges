@@ -21,6 +21,11 @@ Unzip all data and put them into './input/' folder
   * [FastText: crawl-300d-2M](https://github.com/facebookresearch/fastText/blob/master/docs/english-vectors.md) \[[download](https://s3-us-west-1.amazonaws.com/fasttext-vectors/crawl-300d-2M.vec.zip)\]
   * [GloVe: glove.840B.300d](https://nlp.stanford.edu/projects/glove/) \[[download](http://nlp.stanford.edu/data/glove.840B.300d.zip)\]
 
+## Code File Descriptions
+  * **Main.ipynb : **Main  
+  * **./src/Pipeline.py : ** Load pretrained Embedding, load input and preprocessing for train and test
+  * **./src/Toxic_Models.py : ** Build different deep-learning model for toxic classification 
+  * **./src/Model_Trainer.py : ** Training protocol and monitoring
 
 ## Models & Results: 
 
