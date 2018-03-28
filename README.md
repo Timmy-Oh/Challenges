@@ -22,7 +22,7 @@ Unzip all data and put them into './input/' folder
   * [GloVe: glove.840B.300d](https://nlp.stanford.edu/projects/glove/) \[[download](http://nlp.stanford.edu/data/glove.840B.300d.zip)\]
 
 
-## Models: 
+## Models & Results: 
 
 
 | Model	| Embeddings | Public | Private	|
@@ -37,6 +37,11 @@ Unzip all data and put them into './input/' folder
 | RNN-CNN	| glove			| 0.9854	| 0.9843	|
 | RNN-RNN	| glove			| 0.9859	| 0.9851	|
 | RNN-RNN-CNN	| glove			| 0.9857	| 0.9849	|
+| |
+| Ensemble	| fasttext		| 0.9857	| 0.9851	|
+| Ensemble	| glove			| 0.9860	| 0.9851	|
+| Ensemble	| fasttext+glove	| 0.9862	| 0.9856	|
+| Ensemble	| fasttext+glove+lgbm(0.9808/0.9810)	| 0.9870	| 0.9865	|
 
 ## Model Architecture:
 
@@ -44,12 +49,7 @@ Unzip all data and put them into './input/' folder
 ![Alt_Text](/imgs/model_rnn.png)
 ### RNN-CNN
 ![Alt_Text](/imgs/model_rnn_cnn.png)
-
-### RNN-CpasuleNet
-![Alt_Text](/imgs/model_rnn_caps.png)
 ### RNN-RNN
 ![Alt_Text](/imgs/model_2rnn.png)
 ### RNN-RNN-CNN
 ![Alt_Text](/imgs/model_2rnn_cnn.png)
-### Dual-RNN-CNN
-![Alt_Text](/imgs/model_dual_2rnn_cnn_sp.png)
