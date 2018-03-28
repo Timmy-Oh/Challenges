@@ -30,11 +30,13 @@ Unzip all data and put them into './input/' folder
 | |
 | RNN		| fasttext		| 0.9850	| 0.9843	|
 | RNN-CNN	| fasttext		| 0.9846	| 0.9842	|
+| RNN-Capsule	| fasttext		| 0.9847	| 0.9842	|
 | RNN-RNN	| fasttext		| 0.9857	| 0.9847	|
 | RNN-RNN-CNN	| fasttext		| 0.9855	| 0.9845	|
 | |
 | RNN		| glove			| 0.9853	| 0.9842	|
 | RNN-CNN	| glove			| 0.9854	| 0.9843	|
+| RNN-Capsule	| glove			| 0.9850	| 0.9841	|
 | RNN-RNN	| glove			| 0.9859	| 0.9851	|
 | RNN-RNN-CNN	| glove			| 0.9857	| 0.9849	|
 | |
@@ -49,6 +51,8 @@ Unzip all data and put them into './input/' folder
 ![Alt_Text](/imgs/model_rnn.png)
 ### RNN-CNN
 ![Alt_Text](/imgs/model_rnn_cnn.png)
+### RNN-Capsule
+![Alt_Text](/imgs/model_rnn_caps.png)
 ### RNN-RNN
 ![Alt_Text](/imgs/model_2rnn.png)
 ### RNN-RNN-CNN
