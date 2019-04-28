@@ -53,12 +53,12 @@ Unzip all data and put them into './input/' folder
 ## Model Architecture:
 
 ### RNN
-![Alt_Text](/imgs/model_rnn.png)
+![Alt_Text](./imgs/model_rnn.png)
 ### RNN-CNN
-![Alt_Text](/imgs/model_rnn_cnn.png)
+![Alt_Text](./imgs/model_rnn_cnn.png)
 ### RNN-Capsule
-![Alt_Text](/imgs/model_rnn_caps.png)
+![Alt_Text](./imgs/model_rnn_caps.png)
 ### RNN-RNN
-![Alt_Text](/imgs/model_2rnn.png)
+![Alt_Text](./imgs/model_2rnn.png)
 ### RNN-RNN-CNN
-![Alt_Text](/imgs/model_2rnn_cnn.png)
+![Alt_Text](./imgs/model_2rnn_cnn.png)
