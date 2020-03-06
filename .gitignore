@@ -2,7 +2,11 @@
 *.csv
 *.zip
 *.xlsx
-
+*.vec
+*.hdf5
+*.txt
+*.pkl
+*.bin
 #
 # Byte-compiled / optimized / DLL files
 __pycache__/
