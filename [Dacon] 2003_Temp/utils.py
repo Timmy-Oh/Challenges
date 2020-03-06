@@ -35,7 +35,7 @@ def mse_AIFrenz(y_true, y_pred):
 
 # Submission 파일 작성
 def writeSubm(pred):
-    subm['Y18'] = pred_test_adj
+    subm['Y18'] = pred
     dt = datetime.datetime.now().strftime('%m%d%H%M%S')
     
     os.makedirs('./subm', exist_ok=True)
