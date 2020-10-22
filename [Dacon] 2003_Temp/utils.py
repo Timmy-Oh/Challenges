@@ -14,7 +14,7 @@ X8 = ['X13', 'X15', 'X17', 'X25', 'X35']
 
 Xs = np.concatenate([X1, X2, X3, X4, X5, X6, X7, X8])
 
-Ys = ['Y{}'.format(str(i).zfill(2)) for i in range(18)]
+Ys = ['Y{}'.format(str(i).zfill(2)) for i in range(19)]
 
 
 # 대회 평가
@@ -35,6 +35,7 @@ def mse_AIFrenz(y_true, y_pred):
 
 # Submission 파일 작성
 def writeSubm(pred):
+    subm = pd.read_csv('./data/sample_submission.csv')
     subm['Y18'] = pred
     dt = datetime.datetime.now().strftime('%m%d%H%M%S')
     

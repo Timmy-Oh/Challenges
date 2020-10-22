@@ -1,5 +1,8 @@
-# Custom
+# Data / Input
 data/
+input/
+
+# Custom
 *.csv
 *.zip
 *.xlsx
